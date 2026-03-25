@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CCS MUSIC</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('NEON.avif') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #000;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar h2 {
+            color: #1DB954;
+            text-shadow: 0 0 10px #1DB954;
+            font-size: 24px;
+            border-bottom: 2px solid #1DB954;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+        }
+
+        .sidebar a:hover {
+            color: #1DB954;
+        }
+
+        .main {
+            margin-left: 220px; 
+            flex: 1;
+            padding: 20px;
+            padding-bottom: 180px; 
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar button {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: #1DB954;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .playlist-container {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #181818;
+            padding: 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            background-color: #282828;
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .card h4 {
+            margin: 10px 0 5px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #b3b3b3;
+        }
+
+        /* Bottom Player */
+        .player {
+            position: fixed;
+            bottom: 0;
+            left: 220px;
+            right: 0;
+            background-color: #181818;
+            padding: 15px;
+            border-top: 1px solid #282828;
+        }
+
+        .player p {
+            margin: 0 0 10px 0;
+        }
+
+        .player audio {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>CCS MUSIC</h2>
+        <a href="#">Explore</a>
+        <a href="#">Library</a>
+        <a href="#">Playlist</a>
+    </div>
+
+    <div class="main">
+
+        <div class="topbar">
+            <h1>WELCOME!</h1>
+            <button onclick="location.href='login.html'">Sign Out</button>
+        </div>
+
+        <div class="playlist-container">
+
+            <div class="card" onclick="playMusic('She_Will_Be_Loved(256k).mp3','She Will Be Loved - Maroon 5')">
+                <img src="SHEWILLBELOVED.jfif">
+                <h4>She Will Be Loved</h4>
+                <p>Maroon 5</p>
+            </div>
+
+            <div class="card" onclick="playMusic('Taylor_Swift_-_All_Too_Well__10_Minute_Version___Taylor_s_Version___From_The_Vault___Lyrics_(256k).mp3','All Too Well - Taylor Swift')">
+                <img src="ALLTOOWELL.jfif">
+                <h4>All Too Well</h4>
+                <p>Taylor Swift</p>
+            </div>
+
+            <div class="card" onclick="playMusic('Fergie_-_Big_Girls_Don_t_Cry__Lyrics____yes_you_can_hold_my_hand_if_you_want_to(256k).mp3','Big Girls Don\'t Cry - Fergie')">
+                <img src="BIGGIRLSDONTCRY.jfif">
+                <h4>Big Girls Don't Cry</h4>
+                <p>Fergie</p>
+            </div>
+
+            <div class="card" onclick="playMusic('Multo_-_Cup_of_Joe__Official_Lyric_Video_(256k).mp3','Multo - Cup of Joe')">
+                <img src="MULTO.jfif">
+                <h4>Multo</h4>
+                <p>Cup of Joe</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 🎵 Music Player -->
+    <div class="player">
+        <p id="nowPlaying">Now Playing: None</p>
+
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function playMusic(file, title) {
+            const player = document.getElementById("audioPlayer");
+            const source = document.getElementById("audioSource");
+            const nowPlaying = document.getElementById("nowPlaying");
+
+            source.src = file;
+            player.load();
+            player.play();
+
+            nowPlaying.textContent = "Now Playing: " + title;
+        }
+    </script>
+
+</body>
+</html>
