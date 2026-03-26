@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velvet Crust</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">VELVET CRUST</div>
+    <div class="nav-links">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('shop')">Shop</a>
+        <a onclick="showSection('cart')">Cart</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <h1>Welcome to Velvet Crust</h1>
+    <p>Experience the best cakes in town</p>
+    <button class="btn" onclick="goToShop()">Order Here</button>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+    <h2>Our Cakes</h2>
+    <div class="cake-container">
+        <div class="cake">
+            <img src="chocolate.jfif" alt="Chocolate Cake">
+            <h3>Chocolate Cake</h3>
+            <p>Rich chocolate flavor</p>
+            <p class="price">PHP 300</p>
+            <button class="btn" onclick="addToCart('Chocolate Cake', 300)">Add to Cart</button>
+        </div>
+
+        <div class="cake">
+            <img src="vanilla.jfif" alt="Vanilla Cake">
+            <h3>Vanilla Cake</h3>
+            <p>Classic vanilla delight</p>
+            <p class="price">PHP 250</p>
+            <button class="btn" onclick="addToCart('Vanilla Cake', 250)">Add to Cart</button>
+        </div>
+
+        <div class="cake">
+            <img src="strawberry.jfif" alt="Strawberry Cake">
+            <h3>Strawberry Cake</h3>
+            <p>Fresh strawberry taste</p>
+            <p class="price">PHP 280</p>
+            <button class="btn" onclick="addToCart('Strawberry Cake', 280)">Add to Cart</button>
+        </div>
+
+        <div class="cake">
+            <img src="red.jfif" alt="Red Velvet">
+            <h3>Red Velvet</h3>
+            <p>Soft and creamy</p>
+            <p class="price">PHP 320</p>
+            <button class="btn" onclick="addToCart('Red Velvet', 320)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<!-- CART -->
+<section id="cart">
+    <h2>Your Cart (<span id="cart-count">0</span> items)</h2>
+
+    <!-- PICKUP DATE SELECTOR -->
+    <div class="pickup-section">
+        <div class="pickup-card">
+            <div class="pickup-icon">Date/Time</div>
+            <h3>Pickup Date & Time</h3>
+            <div class="date-time-group">
+                <div class="input-group">
+                    <label>Date:</label>
+                    <input type="date" id="pickup-date" class="date-input">
+                </div>
+                <div class="input-group">
+                    <label>Time:</label>
+                    <select id="pickup-time" class="time-input">
+                        <option value="">Select time</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="2:00 PM">2:00 PM</option>
+                        <option value="3:00 PM">3:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                    </select>
+                </div>
+            </div>
+            <p class="availability-note">* Minimum pickup: Tomorrow | Orders close at 4 PM daily</p>
+        </div>
+    </div>
+
+    <!-- CART ITEMS -->
+    <div id="cart-items"></div>
+
+    <!-- TOTAL & CHECKOUT BUTTONS -->
+    <div class="checkout-section">
+        <div class="total-display" id="total">Grand Total: PHP 0</div>
+        <div class="cart-buttons">
+            <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+            <button class="btn checkout-btn" id="checkout-btn" onclick="proceedToCheckout()" disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- LINK JS -->
+<script src="script.js"></script>
+</body>
+</html>
