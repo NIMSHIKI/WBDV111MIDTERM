@@ -1,0 +1,371 @@
+/* --- GENERAL --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- NAVBAR --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4b2e2e;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- SECTIONS --- */
+section {
+    display: none;
+    padding: 40px;
+}
+
+.active {
+    display: block;
+}
+
+/* --- HOME --- */
+#home {
+    background: url('cakebc.jfif') no-repeat center;
+    background-size: cover;
+    color: rgb(219, 4, 4);
+    height: 90vh;
+    text-align: center;
+}
+
+#home h1 {
+    margin-top: 150px;
+    font-size: 50px;
+}
+
+/* --- BUTTON --- */
+.btn {
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #ff3b3b;
+}
+
+/* --- SHOP --- */
+.cake-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cake {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.cake h3 {
+    margin: 10px 0;
+}
+
+/* --- CART --- */
+.cart-item {
+    margin-bottom: 10px;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* --- CART BUTTONS --- */
+.cart-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}
+
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background: #c82333;
+}
+
+.cart-item button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.total-section {
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: gray;
+}
+/* --- PICKUP SECTION --- */
+.pickup-section {
+    margin-bottom: 30px;
+}
+
+.pickup-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.pickup-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(30deg);
+}
+
+.pickup-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.pickup-card h3 {
+    margin: 0 0 25px 0;
+    font-size: 24px;
+}
+
+.date-time-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 180px;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.date-input, .time-input {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.date-input:focus, .time-input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.availability-note {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+/* CHECKOUT SECTION */
+.checkout-section {
+    margin-top: 30px;
+}
+
+.checkout-btn {
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .date-time-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-group {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .pickup-card {
+        padding: 25px 20px;
+    }
+}
+/* --- NOTIFICATION SYSTEM --- */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 350px;
+    max-width: 400px;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(17, 153, 142, 0.4);
+    z-index: 10000;
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification.fade-out {
+    opacity: 0;
+    transform: translateX(400px);
+}
+
+.notif-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    float: left;
+}
+
+.notif-content {
+    display: inline-block;
+    max-width: 70%;
+}
+
+.notif-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.notif-message {
+    font-size: 14px;
+    opacity: 0.95;
+    line-height: 1.4;
+}
+
+.notif-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.notif-close:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Show notification animation */
+.notification {
+    animation: slideInRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+    }
+    
+    .notif-content {
+        max-width: 80%;
+    }
+}
