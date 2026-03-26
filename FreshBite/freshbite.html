@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FreshBite Prep</title>
+
+<link rel="stylesheet" href="mystylecss.css">
+<script defer src="myjava.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<div class="logoArea">
+<img src="logodesign.jfif" alt="FreshBite Logo" class="logo">
+<h1>FreshBite Prep</h1>
+</div>
+
+<nav>
+<a href="#" onclick="showSection('home')">Home</a>
+<a href="#" onclick="showSection('meals')">Meals</a>
+<a href="#" onclick="showSection('billings')">Billings</a>
+<a href="#" onclick="showSection('plans')">Plans</a>
+<a href="#" onclick="toggleDrawer()" id="loginLink">Login</a>
+        <!-- User Status (Hidden initially) -->
+        <span id="userStatus" style="display:none; color: #2ecc71; font-weight: bold;">✓ Signed In</span>
+    </nav>
+</header>
+</nav>
+</header>
+
+<!-- OVERLAY & DRAWER -->
+<div id="drawerOverlay" onclick="toggleDrawer()"></div>
+
+<div id="loginDrawer">
+    <button class="close-btn" onclick="toggleDrawer()">&times;</button>
+    <div class="login-form">
+        <h2>Welcome!!</h2>
+        <form onsubmit="handleLogin(event)">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</div>
+
+<!-- NOTIFICATION MODAL -->
+<div id="notificationModal">
+    <h3 id="notifTitle">Success!</h3>
+    <p id="notifMessage">Message goes here.</p>
+    <button onclick="closeNotification()">OK</button>
+</div>
+
+<section id="home">
+<h2>Welcome to FreshBite Prep</h2>
+<p>Healthy, fresh, and ready-to-eat meals for your daily nutrition.</p>
+
+<button onclick="showNutrients()">View Nutrients Info</button>
+
+<div id="nutrientsBox"></div>
+</section>
+
+
+
+<!-- MEALS -->
+<section id="meals" class="content">
+<h2>Select Your Meal</h2>
+
+<div class="mealCard">
+<img src="grill.jfif" alt="Grilled Chicken Bowl">
+<h3>Grilled Chicken Bowl</h3>
+<p>Protein-rich grilled chicken with brown rice and vegetables.</p>
+<button onclick="selectMeal('Grilled Chicken Bowl')">Select Meal</button>
+</div>
+
+<div class="mealCard">
+<img src="vegan.jpg" alt="Vegan Green Bowl">
+<h3>Vegan Green Bowl</h3>
+<p>Fresh vegetables, avocado, quinoa and healthy greens.</p>
+<button onclick="selectMeal('Vegan Green Bowl')">Select Meal</button>
+</div>
+
+<div class="mealCard">
+<img src="salmon.jpg" alt="Salmon Fit Meal">
+<h3>Salmon Fit Meal</h3>
+<p>Omega-3 rich salmon with steamed broccoli and sweet potato.</p>
+<button onclick="selectMeal('Salmon Fit Meal')">Select Meal</button>
+</div>
+
+</section>
+
+
+<!-- BILLINGS -->
+<section id="billings" class="content">
+<h2>Select Payment Method</h2>
+
+<div class="billingCard">
+<img src="gcash.webp" alt="GCash">
+<h3>GCash</h3>
+<p>Fast and secure mobile payment.</p>
+<button onclick="selectBilling('GCash')">Select</button>
+</div>
+
+<div class="billingCard">
+<img src="creditcard.jfif" alt="Credit Card">
+<h3>Credit / Debit Card</h3>
+<p>Pay using Visa or Mastercard.</p>
+<button onclick="selectBilling('Credit Card')">Select</button>
+</div>
+
+<div class="billingCard">
+<img src="cod.jpg" alt="Cash on Delivery">
+<h3>Cash on Delivery</h3>
+<p>Pay when your meal arrives.</p>
+<button onclick="selectBilling('Cash on Delivery')">Select</button>
+</div>
+
+</section>
+
+
+<!-- PLANS -->
+<section id="plans" class="content">
+<h2>Select Your Meal Plan</h2>
+
+<div class="planCard">
+<h3>Basic Plan</h3>
+<p>3 Meals per week</p>
+<button onclick="finishOrder('Basic Plan')">Select Plan</button>
+</div>
+
+<div class="planCard">
+<h3>Standard Plan</h3>
+<p>5 Meals per week</p>
+<button onclick="finishOrder('Standard Plan')">Select Plan</button>
+</div>
+
+<div class="planCard">
+<h3>Premium Plan</h3>
+<p>7 Meals per week</p>
+<button onclick="finishOrder('Premium Plan')">Select Plan</button>
+</div>
+
+</section>
+
+
+<!-- ORDER SUMMARY -->
+<section id="summary" class="content">
+<h2>Order Summary</h2>
+<p id="result"></p>
+</section>
+
+
+<footer>
+<p>© 2026 FreshBite Prep | Healthy Ready Meals</p>
+</footer>
+
+</body>
+</html>

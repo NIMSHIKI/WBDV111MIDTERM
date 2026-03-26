@@ -1,0 +1,180 @@
+body{
+font-family: Arial;
+margin:0;
+background:#e8f5e9;
+}
+
+header{
+background:#2e7d32;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+section{
+padding:40px;
+text-align:center;
+}
+
+button{
+background:#4caf50;
+color:white;
+border:none;
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#388e3c;
+}
+
+.mealCard{
+background:white;
+padding:20px;
+margin:15px auto;
+width:250px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.planCard{
+background:#c8e6c9;
+padding:20px;
+margin:15px auto;
+width:250px;
+border-radius:10px;
+}
+
+.content{
+display:none;
+}
+
+#nutrientsBox{
+margin-top:20px;
+font-weight:bold;
+color:#2e7d32;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+text-align:center;
+padding:10px;
+}
+
+.mealCard img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.billingCard{
+background:white;
+padding:20px;
+margin:15px auto;
+width:250px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.billingCard img{
+width:80px;
+height:80px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+ /* --- NEW CSS FOR SIDE DRAWER --- */
+    #loginDrawer {
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 300px;
+        height: 100%;
+        background-color: #ffffff;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+        transition: right 0.4s ease-in-out;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    #loginDrawer.active { right: 0; }
+    
+    #drawerOverlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+    #drawerOverlay.active { display: block; opacity: 1; }
+    
+    .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; align-self: flex-end; margin-bottom: 20px; color: #333; }
+    .login-form input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .login-form button { width: 100%; padding: 10px; background-color: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+    .login-form button:hover { background-color: #219150; }
+
+    /* --- NEW CSS FOR NOTIFICATIONS --- */
+    #notificationModal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 2000;
+        text-align: center;
+        display: none;
+        max-width: 300px;
+    }
+    #notificationModal h3 { margin-top: 0; color: #27ae60; }
+    #notificationModal p { color: #555; }
+    #notificationModal button {
+        background-color: #00ff4c; color: white; border: none; padding: 10px 20px;
+        border-radius: 5px; cursor: pointer; margin-top: 15px;
+    }
+    #notificationModal button:hover { background-color: #4caf50;; }
+
+    /* --- NEW CSS FOR SELECT DROPDOWNS --- */
+    .select-container { margin-top: 10px; }
+    select {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
+
+    .logoArea{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+.logo{
+width:50px;
+height:50px;
+object-fit:contain;
+}
