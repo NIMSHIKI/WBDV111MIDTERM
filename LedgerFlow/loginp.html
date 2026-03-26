@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SIGN IN</title>
+
+    <style>
+        body {
+            background-color: whitesmoke;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(24,24,24,0.9);
+            padding: 40px;
+            width: 300px;
+            border-radius: 10px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: #282828;
+            color: white;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border-radius: 30px;
+            border: none;
+            background-color: #004bec;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004bec;
+        }
+
+        a {
+            color: #004bec;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>LEDGER FLOW</h1>
+
+        <form action="Ledge.html">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+
+            <!--button -->
+            <button type="submit">Sign In</button>
+        </form>
+
+        <p>Don't have an account?
+            <a href="">Sign up</a>
+        </p>
+    </div>
+
+</body>
+</html>
