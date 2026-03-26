@@ -1,0 +1,8 @@
+body {
+    background: url('ss.jfif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--font-family);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+}
