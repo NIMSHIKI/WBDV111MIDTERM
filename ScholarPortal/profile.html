@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Scholar Portal</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">Scholar Portal</div>
+    <div class="nav-links">
+        <a href="dashboard.html" class="nav-link">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="register.html" class="nav-link">Register</a>
+        <a href="profile.html" class="nav-link active">Profile</a>
+        <a href="index.html" class="nav-link logout">Logout</a>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <h1>Student Profile</h1>
+    <p>View and manage your personal information</p>
+</div>
+
+<div class="container">
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">👨‍🎓</div>
+                <div class="profile-info">
+                    <h2>Jhun Reygan D. Pelayo</h2>
+                    <p class="student-id">Student ID: <strong>2026-001</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="detail-section">
+                <h3>📋 Personal Information</h3>
+                <div class="detail-row">
+                    <label>Full Name:</label>
+                    <span>Jhun Reygan D. Pelayo</span>
+                </div>
+                <div class="detail-row">
+                    <label>Student ID:</label>
+                    <span>2026-001</span>
+                </div>
+                <div class="detail-row">
+                    <label>Program:</label>
+                    <span>Information Technology</span>
+                </div>
+                <div class="detail-row">
+                    <label>Enrollment Status:</label>
+                    <span class="status-active">Active</span>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h3>📚 Academic Progress</h3>
+                <div class="detail-row">
+                    <label>Year Level:</label>
+                    <span>First Year</span>
+                </div>
+                <div class="detail-row">
+                    <label>GPA:</label>
+                    <span>2.00</span>
+                </div>
+                <div class="detail-row">
+                    <label>Courses Completed:</label>
+                    <span>12</span>
+                </div>
+                <div class="detail-row">
+                    <label>Current Courses:</label>
+                    <span>8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="transcript-section">
+            <button class="section-btn" onclick="toggleTranscript()">📊 View Academic Transcript</button>
+            
+            <div id="transcript" class="transcript-content" style="display:none;">
+                <h3>Academic Transcript</h3>
+                <table class="transcript-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>A</td>
+                            <td><span class="grade-excellent">Excellent</span></td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics</td>
+                            <td>B+</td>
+                            <td><span class="grade-good">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>Cybersecurity Basics</td>
+                            <td>A-</td>
+                            <td><span class="grade-excellent">Excellent</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="edit-profile-btn">
+            <button class="primary-btn">✏️ Edit Profile</button>
+        </div>
+    </div>
+</div>
+
+<script src="myscript.js"></script>
+</body>
+</html>

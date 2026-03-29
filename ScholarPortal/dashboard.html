@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Scholar Portal</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">Scholar Portal</div>
+    <div class="nav-links">
+        <a href="dashboard.html" class="nav-link active">Home</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="register.html" class="nav-link">Register</a>
+        <a href="profile.html" class="nav-link">Profile</a>
+        <a href="index.html" class="nav-link logout">Logout</a>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <h1>Welcome Back, Scholar!</h1>
+    <p>Your academic journey continues here.</p>
+</div>
+
+<div class="container">
+    <div class="dashboard-grid">
+        <div class="dashboard-card">
+            <div class="card-icon">📚</div>
+            <h3>My Courses</h3>
+            <p>View and manage your enrolled courses</p>
+            <a href="courses.html" class="card-btn">View Courses</a>
+        </div>
+        <div class="dashboard-card">
+            <div class="card-icon">📝</div>
+            <h3>Register</h3>
+            <p>Enroll in new courses for this semester</p>
+            <a href="register.html" class="card-btn">Register Now</a>
+        </div>
+        <div class="dashboard-card">
+            <div class="card-icon">📊</div>
+            <h3>Transcript</h3>
+            <p>View your academic transcript and grades</p>
+            <button class="card-btn" onclick="showTranscript()">View Transcript</button>
+        </div>
+        <div class="dashboard-card">
+            <div class="card-icon">👤</div>
+            <h3>Profile</h3>
+            <p>Update your profile information</p>
+            <a href="profile.html" class="card-btn">Edit Profile</a>
+        </div>
+    </div>
+</div>
+
+<script src="myscript.js"></script>
+</body>
+</html>
