@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Events | Tickets</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tickets">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Nexus Events</a>
+      <nav class="nav-links">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="events.html" data-nav="events">Events</a>
+        <a href="tickets.html" data-nav="tickets">Tickets</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="admin-login.html" data-nav="admin">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title"><center>Tickets & Access</center></h1>
+
+    <section class="grid">
+      <article class="card">
+        <h3><center>Starter</center></h3>
+        <p><center>General entry, standing zone, and merch lane access.</center></p>
+        <strong><center>$45</center></strong>
+        <a class="btn btn--ghost" href="contact.html">Ask for Group Rates</a>
+      </article>
+      <article class="card">
+        <h3><center>Most Popular</center></h3>
+        <p><center>Priority entry, lounge access, and 1 drink ticket.</center></p>
+        <strong><center>$85</center></strong>
+        <a class="btn btn--ghost" href="contact.html">Ask for Group Rates</a>
+      </article>
+      <article class="card">
+        <h3><center>VIP</center></h3>
+        <p><center>Balcony seating, backstage tour, and event photo pack.</center></p>
+        <strong><center>$140</center></strong>
+        <a class="btn btn--ghost" href="contact.html">Ask for Group Rates</a>
+      </article>
+    </section>
+
+    <section style="margin-top: 2.5rem;">
+      <div class="panel">
+        <h2 class="section-title" style="margin-top:0;"><center>Quick Ticket Builder</center></h2>
+        <div class="ticket-row" data-ticket-row data-price="45">
+          <div>
+            <strong>Starter</strong>
+            <p>Entry + merch lane</p>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-qty-minus>-</button>
+            <input type="text" value="0" data-qty>
+            <button type="button" data-qty-plus>+</button>
+          </div>
+          <div>$45 each</div>
+        </div>
+        <div class="ticket-row" data-ticket-row data-price="85">
+          <div>
+            <strong>Most Popular</strong>
+            <p>Priority entry + lounge</p>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-qty-minus>-</button>
+            <input type="text" value="0" data-qty>
+            <button type="button" data-qty-plus>+</button>
+          </div>
+          <div>$85 each</div>
+        </div>
+        <div class="ticket-row" data-ticket-row data-price="140">
+          <div>
+            <strong>VIP</strong>
+            <p>Balcony + backstage</p>
+          </div>
+          <div class="qty-control">
+            <button type="button" data-qty-minus>-</button>
+            <input type="text" value="0" data-qty>
+            <button type="button" data-qty-plus>+</button>
+          </div>
+          <div>$140 each</div>
+        </div>
+        <div class="total-box" style="margin-top: 1.2rem;">
+          Total: <span data-total>$0</span>
+        </div>
+      </div>
+    </section>
+<div class="total-box" style="margin-top: 1.2rem;">
+          <p style="margin:0;">Ready to book? Contact our support crew or scan the QR code below to purchase tickets online.</p>
+          <button class="btn btn--ghost" style="margin-top: 1rem;" onclick="document.getElementById('qrModal').showModal()">View QR Code</button>
+        </div>
+      </div>
+    </section>
+
+    <dialog id="qrModal" style="border: none; border-radius: 8px; padding: 2rem; text-align: center;">
+      <img src="qr.png" alt="QR Code for ticket purchase" style="width: 300px; display: block; margin: 0 auto;">
+      <button class="btn btn--ghost" style="margin-top: 1rem;" onclick="document.getElementById('qrModal').close()">Close</button>
+    </dialog>
+    <section style="margin-top: 2.5rem;">
+      <h2 class="section-title"><center>FAQ</center></h2>
+      <div class="accordion" data-accordion>
+        <div class="accordion-item open">
+          <button type="button"><center>What is included with a ticket?</center></button>
+          <div class="content">
+           <center>Every ticket includes entry, venue access, and the Nexus pop-up experience. Glow and Orbit add lounge perks.</center>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button"><center>Can I transfer my ticket?</center></button>
+          <div class="content">
+            <center>Yes. Tickets can be transferred up to 6 hours before doors open. Contact our support crew.</center>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button"><center>Do you offer group discounts?</center></button>
+          <div class="content">
+            <center>Groups of 8 or more get custom bundles. Hit us up on the contact page for a quick quote.</center>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner" style="display:flex; justify-content:center; align-items:center; text-align:center;">
+      <p style="margin:0;">Nexus Events. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
+
+
+
+

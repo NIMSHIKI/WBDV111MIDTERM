@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Events | Admin Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">Nexus Events</a>
+      <nav class="nav-links">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="events.html" data-nav="events">Events</a>
+        <a href="tickets.html" data-nav="tickets">Tickets</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="admin-login.html" data-nav="admin">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero admin-hero" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div>
+        <h1><center>Admin Control Room</center></h1>
+        <p><center>Authorized team only.</center></p>
+      </div>
+      <div class="panel auth-card admin-login-card">
+        <h2 style="margin-top:0;">Admin Login</h2>
+        <p class="form-note">Demo access: <strong>admin</strong> / <strong>nexus2026</strong></p>
+        <form class="form-grid" data-admin-form>
+          <label>
+            Admin ID
+            <input type="text" placeholder="admin" required autocomplete="username" data-admin-user>
+          </label>
+          <label>
+            Password
+            <input type="password" placeholder="••••••••" required autocomplete="current-password" data-admin-pass>
+          </label>
+          <button class="btn btn--big" type="submit">Enter Dashboard</button>
+          <p class="status" data-admin-status></p>
+        </form>
+      </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner" style="display:flex; justify-content:center; align-items:center; text-align:center;">
+      <p style="margin:0;">Nexus Events. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</body>
+</html>
+
+
+
+
