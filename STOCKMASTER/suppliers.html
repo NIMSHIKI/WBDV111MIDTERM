@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers - STOCKMASTER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>STOCKMASTER</h2>
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="inventory.html" class="nav-link">Inventory</a>
+        <a href="orders.html" class="nav-link">Orders</a>
+        <a href="suppliers.html" class="nav-link active">Suppliers</a>
+        <a href="reports.html" class="nav-link">Reports</a>
+    </div>
+
+    <div class="main">
+        <h1>Suppliers Management</h1>
+        <p>Manage your suppliers efficiently.</p>
+
+        <div class="card">
+            <h3>Add New Supplier</h3>
+            <form id="supplierForm">
+                <input type="text" id="supplierName" placeholder="Supplier Name" required>
+                <input type="email" id="supplierEmail" placeholder="Email" required>
+                <input type="tel" id="supplierPhone" placeholder="Phone" required>
+                <input type="text" id="supplierAddress" placeholder="Address" required>
+                <button type="submit" class="btn">Add Supplier</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Supplier List</h3>
+            <table id="supplierTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC Supplies</td>
+                        <td>contact@abc.com</td>
+                        <td>+1 234 567 890</td>
+                        <td>123 Main St, City</td>
+                        <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>XYZ Distributors</td>
+                        <td>info@xyz.com</td>
+                        <td>+1 234 567 891</td>
+                        <td>456 Elm St, City</td>
+                        <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('supplierForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('supplierName').value;
+            const email = document.getElementById('supplierEmail').value;
+            const phone = document.getElementById('supplierPhone').value;
+            const address = document.getElementById('supplierAddress').value;
+
+            const table = document.getElementById('supplierTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${email}</td>
+                <td>${phone}</td>
+                <td>${address}</td>
+                <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+            `;
+
+            // Clear form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
