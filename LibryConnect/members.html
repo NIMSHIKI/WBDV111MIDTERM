@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LibryConnect - Members</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h1>LibryConnect</h1>
+  <div class="nav-links">
+    <a href="index.html">Search</a>
+    <a href="members.html">Members</a>
+    <a href="loan.html">Loans</a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Library Members</h2>
+
+  <div class="search-controls">
+    <input type="text" id="memberSearchInput" placeholder="Search members" oninput="filterMembers()" aria-label="Search library members" />
+    <button onclick="resetMemberSearch()">Clear</button>
+  </div>
+
+  <h3>New Member</h3>
+  <div class="member-form">
+    <input type="text" id="newMemberName" placeholder="Name" aria-label="New member name" />
+    <input type="text" id="newMemberId" placeholder="ID" aria-label="New member ID" />
+    <button onclick="addMember()">Add</button>
+  </div>
+
+  <p id="memberMessage" class="status-text"></p>
+
+  <table id="memberTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- dynamic members list -->
+    </tbody>
+  </table>
+
+</div>
+
+<script src="myscript.js"></script>
+
+</body>
+</html>

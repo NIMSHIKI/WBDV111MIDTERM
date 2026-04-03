@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LibryConnect - Loans</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h1>LibryConnect</h1>
+  <div class="nav-links">
+    <a href="index.html">Search</a>
+    <a href="members.html">Members</a>
+    <a href="loan.html">Loans</a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Loan Records</h2>
+
+  <div class="search-controls">
+    <input type="text" id="loanSearchInput" placeholder="Search loans by book or borrower..." oninput="filterLoans()" aria-label="Search loan records" />
+    <button onclick="resetLoanSearch()">Clear</button>
+  </div>
+
+  <div class="loan-form">
+    <input list="bookOptions" type="text" id="newLoanBook" placeholder="Book title" aria-label="Book title" />
+    <datalist id="bookOptions"></datalist>
+    <input list="memberOptions" type="text" id="newLoanBorrower" placeholder="Borrower name" aria-label="Borrower name" />
+    <datalist id="memberOptions"></datalist>
+    <input type="date" id="newLoanDueDate" aria-label="Due date" />
+    <button onclick="addLoan()">Add Loan</button>
+  </div>
+
+  <p id="loanMessage" class="status-text"></p>
+
+  <table id="loanTable">
+    <thead>
+      <tr>
+        <th>Book</th>
+        <th>Borrower</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- dynamic loan list -->
+    </tbody>
+  </table>
+
+  <br>
+  <button onclick="showOverdue()">View Overdue Info</button>
+
+  <p id="overdueInfo"></p>
+</div>
+
+<script src="myscript.js"></script>
+</body>
+</html>

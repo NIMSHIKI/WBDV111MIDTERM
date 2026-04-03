@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4ecd8;
+  color: #3b2f2f;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #d8c3a5;
+  border-bottom: 3px solid #8b6f47;
+}
+
+.navbar h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #3b2f2f;
+  font-weight: bold;
+}
+
+/* CARD STYLE (Library Card Look) */
+.card {
+  background: #fff8e7;
+  margin: 40px auto;
+  padding: 30px;
+  width: 80%;
+  border: 2px dashed #8b6f47;
+  box-shadow: 5px 5px 0 #c2a878;
+  position: relative;
+}
+
+.card::before {
+  content: "LIBRARY RECORD";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #f4ecd8;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: 1px solid #8b6f47;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #8b6f47;
+  color: white;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+  background: #5c472f;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table, th, td {
+  border: 1px solid #8b6f47;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+#searchInput, #memberSearchInput, #newMemberName, #newMemberId {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #8b6f47;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.member-form,
+.loan-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #d8c3a5;
+  border-radius: 6px;
+  background: #fffaf3;
+}
+
+.member-form input,
+.loan-form input {
+  min-width: 0;
+  padding: 8px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.member-form button,
+.loan-form button,
+#searchButton,
+#clearButton {
+  min-width: 70px;
+  width: auto;
+  padding: 8px 12px;
+  margin-left: 0;
+  height: 40px;
+  align-self: center;
+}
+
+.member-form button,
+.loan-form button {
+  margin-top: 0;
+}
+
+button.small {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+button.danger {
+  background: #a41313;
+}
+
+button.danger:hover {
+  background: #7f0d0d;
+}
+
+.status-text {
+  margin: 6px 0 14px;
+  font-weight: 500;
+}
+
+.status-text.warning {
+  color: #9a6b00;
+}
+
+.status-text.success {
+  color: #1a6f1a;
+}
+
+.status-text.danger {
+  color: #a41313;
+}
+
+.results-panel table {
+  width: 100%;
+  border: 1px solid #8b6f47;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.results-panel th {
+  background: #d8c3a5;
+}
+
+.available {
+  color: #1a6f1a;
+  font-weight: 600;
+}
+
+.unavailable {
+  color: #a41313;
+  font-weight: 600;
+}
+
+@media (max-width: 740px) {
+  .card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .search-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}

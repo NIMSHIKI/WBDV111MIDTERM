@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LibryConnect - Search</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h1>LibryConnect</h1>
+  <div class="nav-links">
+    <a href="index.html">Search</a>
+    <a href="members.html">Members</a>
+    <a href="loan.html">Loans</a>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Search Books</h2>
+
+  <div class="search-controls">
+    <input list="bookSuggestions" id="searchInput" placeholder="Enter book title, author, or genre..." aria-label="Book search input" oninput="liveSearchBook()" />
+    <datalist id="bookSuggestions"></datalist>
+    <button id="searchButton" onclick="searchBook()">Search</button>
+    <button id="clearButton" onclick="clearSearch()">Clear</button>
+  </div>
+
+  <p id="statusMessage" class="status-text" role="status" aria-live="polite"></p>
+  <div id="searchResults" class="results-panel"></div>
+</div>
+
+<script src="myscript.js"></script>
+</body>
+</html>
