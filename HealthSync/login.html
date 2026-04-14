@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthSync Login</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="login">
+  <div class="page-bg" aria-hidden="true">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+  </div>
+
+  <header class="portal-header">
+    <div class="brand-block">
+      <div>
+        <p class="eyebrow">Get Started</p>
+        <h1>HealthSync</h1>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a class="nav-link" href="index.html">Back to Booking</a>
+      <button class="logout-button" type="button" data-logout>Clear Session</button>
+    </nav>
+  </header>
+
+  <main class="portal-shell">
+    <section class="welcome-card">
+      <div class="welcome-copy">
+        <p class="eyebrow">Staff & Admin Access</p>
+        <h2>Log in to your dashboard.</h2>
+        <p class="support-copy">
+          Choose from four demo accounts: <strong>Default</strong>, <strong>Admin</strong>, <strong>Staff</strong>, or <strong>User</strong>. Each one opens a different dashboard with role-specific tools.
+        </p>
+        <div class="helper-row">
+          <a class="action-link" href="index.html#wizard">Back to Booking</a>
+          <a class="ghost-link" href="index.html">Home Page</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-layout">
+      <section>
+        <p class="eyebrow">Try These</p>
+        <div id="accountButtons" class="account-button-row" aria-label="Choose a demo account role"></div>
+        <div id="accountGrid" class="account-grid hidden"></div>
+      </section>
+
+      <article class="login-panel">
+        <p class="eyebrow">Sign In</p>
+        <h2>Enter your credentials.</h2>
+        <p class="helper-text">Type your info below or click a demo account to fill it in automatically.</p>
+
+        <form id="loginForm">
+          <div class="field-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="Enter username" autocomplete="username">
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password">
+          </div>
+
+          <button class="submit-button" type="submit">Sign In</button>
+          <p id="loginStatus" class="status-note" data-state="idle"></p>
+        </form>
+
+        <div class="helper-row">
+          <p id="currentSession" class="helper-text" hidden></p>
+          <button id="continueSession" class="ghost-link" type="button" hidden>Continue Session</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
