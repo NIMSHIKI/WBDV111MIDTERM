@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaker Travel & Tour - Van Rental</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Blaker Travel & Tour" class="logo">
+        <h1>Blakers Travel & Tour</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#van-rental">Van Rental</a>
+            <a href="Aboutus.html">About us</a>
+            <a href="Contactus.html">Contact us</a>
+            <a href="Review.html">Review</a>
+            <button class="login-btn">Login</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Go Anywhere, Travel Everywhere with Blaker Travel & Tour</h1>
+                <p>We provide complete van rental solutions for your unforgettable journeys. Book now and hit the road!</p>
+                <button class="rent-btn">Start Your Adventure</button>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </section>
+        <section id="van-types" class="van-types">
+            <h2>Our Van Types</h2>
+            <div class="vans-grid">
+                <div class="van-card">
+                    <img src="compact-van.jpg" alt="Compact Van" class="van-image">
+                    <h3>Compact Vans</h3>
+                    <p>Perfect for small groups and city trips.</p>
+                </div>
+                <div class="van-card">
+                    <img src="family-van.jpg" alt="Family Van" class="van-image">
+                    <h3>Family Vans</h3>
+                    <p>Spacious and comfortable for family adventures.</p>
+                </div>
+                <div class="van-card">
+                    <img src="luxury-van.jfif" alt="Luxury Van" class="van-image">
+                    <h3>Luxury Vans</h3>
+                    <p>Premium features for an elevated travel experience.</p>
+                </div>
+                <div class="van-card">
+                    <img src="cargo-van.jfif" alt="Cargo Van" class="van-image">
+                    <h3>Cargo Vans</h3>
+                    <p>Ideal for transporting goods and equipment.</p>
+                </div>
+            </div>
+        </section>
+        <section id="booking" class="booking-section">
+            <div class="booking-steps">
+                <h2>How to Book?</h2>
+                <ol>
+                    <li>Choose your van type and package.</li>
+                    <li>Select pickup and return date and time.</li>
+                    <li>Enter pickup and return locations.</li>
+                    <li>Provide your contact details and submit.</li>
+                </ol>
+            </div>
+            <div class="booking-card">
+                <div class="booking-title">Rent Your Van</div>
+                <form class="booking-form">
+                    <div class="booking-row">
+                        <div class="input-group">
+                            <label for="pickup-datetime">Pickup Date/Time</label>
+                            <input type="datetime-local" id="pickup-datetime" name="pickup-datetime">
+                        </div>
+                        <div class="input-group">
+                            <label for="return-datetime">Return Date/Time</label>
+                            <input type="datetime-local" id="return-datetime" name="return-datetime">
+                        </div>
+                    </div>
+                    <div class="booking-row">
+                        <div class="input-group">
+                            <label for="pickup-location">Pickup Location</label>
+                            <input type="text" id="pickup-location" name="pickup-location" placeholder="Pickup location">
+                        </div>
+                        <div class="input-group">
+                            <label for="return-location">Return Location</label>
+                            <input type="text" id="return-location" name="return-location" placeholder="Return location">
+                        </div>
+                    </div>
+                    <div class="booking-row">
+                        <div class="input-group">
+                            <label for="book-name">Name</label>
+                            <input type="text" id="book-name" name="book-name" placeholder="Your full name">
+                        </div>
+                        <div class="input-group">
+                            <label for="book-email">Email</label>
+                            <input type="email" id="book-email" name="book-email" placeholder="Your email address">
+                        </div>
+                    </div>
+                    <div class="booking-row single-row">
+                        <div class="input-group">
+                            <label for="book-phone">Phone Number</label>
+                            <input type="tel" id="book-phone" name="book-phone" placeholder="Your phone number">
+                        </div>
+                    </div>
+                    <button type="submit" class="book-btn">Book Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+    </footer>
+</body>
+</html></content>
