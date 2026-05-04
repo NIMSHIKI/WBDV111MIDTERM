@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Actions - Blaker Travel & Tour</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Blaker Travel & Tour" class="logo">
+        <h1>Blaker Travel & Tour</h1>
+        <nav>
+            <a href="superadmin.html">Super Admin</a>
+            <a href="SuperA.html">Staff Account</a>
+            <a href="Revenue.html">Revenue Report</a>
+            <a href="login.html" class="login-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="logo.png" alt="Blaker Travel & Tour" class="hero-logo">
+                <h1>Super Admin Actions</h1>
+                <p>Access staff management controls directly from the Super Admin dashboard.</p>
+                <a href="#quick-actions" class="rent-btn">Manage Staff</a>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </section>
+
+        <section class="van-types" id="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="vans-grid">
+                <div class="van-card action-card">
+                    <h3>Create Staff Account</h3>
+                    <p>Register a new team member and grant access to the staff portal.</p>
+                    <button type="button" class="action-button" id="show-create-staff">Make Account</button>
+                    <div class="action-panel hidden" id="create-staff-panel">
+                        <form id="create-staff-form" class="staff-form">
+                            <label>Name<input type="text" id="staff-name" placeholder="Enter full name"></label>
+                            <label>Username<input type="text" id="staff-username" placeholder="Enter username"></label>
+                            <label>Password<input type="password" id="staff-password" placeholder="Create password"></label>
+                            <label>Confirm Password<input type="password" id="staff-confirm-password" placeholder="Confirm password"></label>
+                            <button type="submit" class="payment-submit">Create Account</button>
+                            <p class="payment-feedback" id="create-staff-feedback"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="van-card action-card">
+                    <h3>Deactivate Staff Account</h3>
+                    <p>Remove access for staff members who no longer need portal privileges.</p>
+                    <button type="button" class="action-button" id="show-remove-staff">Remove Account</button>
+                    <div class="action-panel hidden" id="remove-staff-panel">
+                        <div class="staff-list" id="staff-list">
+                            <div class="staff-item">
+                                <div>
+                                    <strong>Jane Santos</strong>
+                                    <p>Username: janes</p>
+                                </div>
+                                <button type="button" class="staff-remove">Remove</button>
+                            </div>
+                            <div class="staff-item">
+                                <div>
+                                    <strong>Mark Reyes</strong>
+                                    <p>Username: markr</p>
+                                </div>
+                                <button type="button" class="staff-remove">Remove</button>
+                            </div>
+                            <div class="staff-item">
+                                <div>
+                                    <strong>Rina Cruz</strong>
+                                    <p>Username: rinac</p>
+                                </div>
+                                <button type="button" class="staff-remove">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="van-types" id="customer-reviews">
+            <h2>Recent Customer Reviews</h2>
+            <div class="reviews-list" id="reviews-list">
+                <p class="empty-reviews">No customer reviews yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blaker Travel & Tour</h2>
+                <p>Reliable van rentals for families, cargo, and luxury travel. Ready for your next road trip.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="Vanrental.html">Van Rental</a>
+                <a href="Aboutus.html">About us</a>
+                <a href="Contactus.html">Contact us</a>
+                <a href="Review.html">Review</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: 0997 915 3983</p>
+                <p>Email: support@blakertravel.com</p>
+                <p>Orell Building, Lower San Roque Bulacao, Cebu city</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="myscript.js"></script>
+</body>
+</html>
