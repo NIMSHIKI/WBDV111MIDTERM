@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaker Travel & Tour - Login</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Blaker Travel & Tour" class="logo"></a>
+        <h1 class="site-title">Blakers Travel & Tour</h1>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="Vanrental.html">Van Rental</a>
+            <a href="Aboutus.html">About us</a>
+            <a href="Contactus.html">Contact us</a>
+            <a href="Review.html">Review</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+    <div class="terms-modal-overlay" id="terms-modal">
+        <div class="terms-modal">
+            <h2>Terms & Conditions</h2>
+            <p>Please review and accept our terms before logging in. If you are already logged in, this message will not appear.</p>
+            <ul>
+                <li>Use the site only for valid van rental inquiries.</li>
+                <li>Keep your account information secure.</li>
+                <li>Agree to our privacy and booking policies.</li>
+            </ul>
+            <div class="modal-actions">
+                <button id="accept-terms" class="auth-button">Accept</button>
+                <button id="decline-terms" class="auth-button secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+    <main class="hero">
+        <section class="auth-page">
+            <div class="auth-top-info">
+                <div class="auth-header">
+                    <h1>Login Roles</h1>
+                    <p class="login-note">Use the role below and sign in with the matching username and password.</p>
+                </div>
+                <div class="role-card-row">
+                    <div class="auth-role-card">
+                        <h3>User</h3>
+                        <p>Username: <strong>User</strong></p>
+                        <p>Password: <strong>user123</strong></p>
+                    </div>
+                    <div class="auth-role-card">
+                        <h3>Admin</h3>
+                        <p>Username: <strong>Admin</strong></p>
+                        <p>Password: <strong>admin123</strong></p>
+                    </div>
+                    <div class="auth-role-card">
+                        <h3>Super Admin</h3>
+                        <p>Username: <strong>SuperA</strong></p>
+                        <p>Password: <strong>super123</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-grid">
+                <div class="auth-wrapper" id="login">
+                    <div class="auth-header">
+                        <h1>LOGIN</h1>
+                        <p class="login-note">Sign in with one of the account types shown above.</p>
+                    </div>
+                    <form id="login-form" class="auth-form" action="#">
+                        <div class="input-group">
+                            <label for="login-username">Username</label>
+                            <input type="text" id="login-username" name="login-username" placeholder="Enter your username">
+                        </div>
+                        <div class="input-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="login-password" placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="auth-button">Login</button>
+                        <p class="form-error" id="login-error" aria-live="polite"></p>
+                        <div class="auth-switch">
+                            Don't have an account? <a href="#signup" data-auth-target="signup">Sign up</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="auth-wrapper hidden" id="signup">
+                    <div class="auth-header">
+                        <h1>SIGN UP</h1>
+                    </div>
+                    <form id="signup-form" class="auth-form" action="#login">
+                        <div class="input-group">
+                            <label for="signup-fullname">Full Name</label>
+                            <input type="text" id="signup-fullname" name="signup-fullname" placeholder="Enter your full name">
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" name="signup-email" placeholder="Enter your email address">
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-phone">Phone Number</label>
+                            <input type="tel" id="signup-phone" name="signup-phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="input-group">
+                            <label>Gender</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="signup-gender" value="male"> Male</label>
+                                <label><input type="radio" name="signup-gender" value="female"> Female</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-age">Age</label>
+                            <input type="number" id="signup-age" name="signup-age" placeholder="Enter your age" min="13">
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" name="signup-password" placeholder="Create a password">
+                        </div>
+                        <div class="input-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" name="signup-confirm-password" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="auth-button">Sign Up</button>
+                        <p class="form-success" id="signup-feedback" aria-live="polite"></p>
+                        <div class="auth-switch">
+                            Already have an account? <a href="#login" data-auth-target="login">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blaker Travel & Tour</h2>
+                <p>Reliable van rentals for families, cargo, and luxury travel. Ready for your next road trip.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="Vanrental.html">Van Rental</a>
+                <a href="Aboutus.html">About us</a>
+                <a href="Contactus.html">Contact us</a>
+                <a href="Review.html">Review</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: 0997 915 3983</p>
+                <p>Email: support@blakertravel.com</p>
+                <p>Orell Building, Lower San Roque Bulacao, Cebu city</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="myscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Blaker Travel & Tour</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Blaker Travel & Tour" class="logo">
+        <h1>Blaker Travel & Tour</h1>
+        <nav>
+            <a href="#our-van">Van Rental</a>
+            <a href="login.html" class="login-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="logo.png" alt="Blaker Travel & Tour" class="hero-logo">
+                <h1>Welcome to User View</h1>
+                <p>Continue Your Rental Journey. Browse our available vans and complete your booking securely.</p>
+                <a href="#our-van" class="rent-btn">Choose a Van</a>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </section>
+
+        <section class="van-listing" id="our-van">
+            <h2>Available Vans</h2>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="compact-van.jpg" alt="Compact Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Compact Van</h3>
+                    <p>Efficient, agile, and easy to drive. Ideal for quick city trips and small groups.</p>
+                    <ul class="van-features">
+                        <li>4 passengers</li>
+                        <li>Compact size for tight spaces</li>
+                        <li>Fuel-efficient performance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="family-van.jpg" alt="Family Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Family Van</h3>
+                    <p>Comfortable seating and extra cargo room make it perfect for family road trips and weekend getaways.</p>
+                    <ul class="van-features">
+                        <li>7 passengers</li>
+                        <li>Roomy interior with luggage space</li>
+                        <li>Entertainment-ready cabin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="luxury-van.jfif" alt="Luxury Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Luxury Van</h3>
+                    <p>Premium finishes, plush seating, and high-end amenities for a more elegant travel experience.</p>
+                    <ul class="van-features">
+                        <li>Leather seats</li>
+                        <li>Premium audio system</li>
+                        <li>Advanced comfort features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="cargo-van.jfif" alt="Cargo Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Cargo Van</h3>
+                    <p>Strong, spacious, and dependable. Great for moving items, equipment, and supplies.</p>
+                    <ul class="van-features">
+                        <li>Large cargo area</li>
+                        <li>Heavy-duty handling</li>
+                        <li>Reliable for long trips</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="payment-modal-overlay" id="payment-modal">
+        <div class="payment-modal">
+            <h2>Please choose your payment method</h2>
+            <p>Select a payment option to complete your booking.</p>
+            <div class="payment-options">
+                <button type="button" class="payment-option" data-method="Card">Card</button>
+                <button type="button" class="payment-option" data-method="GCash">GCash</button>
+                <button type="button" class="payment-option" data-method="Cash">Cash on Delivery</button>
+            </div>
+            <div id="payment-form-container" class="payment-form-container"></div>
+            <button type="button" class="modal-close" id="payment-close">Cancel</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blaker Travel & Tour</h2>
+                <p>Reliable van rentals for families, cargo, and luxury travel. Ready for your next road trip.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="Vanrental.html">Van Rental</a>
+                <a href="Aboutus.html">About us</a>
+                <a href="Contactus.html">Contact us</a>
+                <a href="Review.html">Review</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: 0997 915 3983</p>
+                <p>Email: support@blakertravel.com</p>
+                <p>Orell Building, Lower San Roque Bulacao, Cebu city</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="myscript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var welcomeUserNameElem = document.getElementById('welcome-user-name');
+            var storedName = localStorage.getItem('blakerUserName') || localStorage.getItem('blakerRole') || 'Traveler';
+            if (welcomeUserNameElem) {
+                welcomeUserNameElem.textContent = storedName;
+            }
+        });
+    </script>
+</body>
+</html>
