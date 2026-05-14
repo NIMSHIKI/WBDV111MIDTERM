@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Report - Blaker Travel & Tour</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="logo.png" alt="Blaker Travel & Tour" class="logo">
+            <h1>Blaker Travel & Tour</h1>
+        </div>
+        <nav>
+            <a href="SuperA.html">Staff Account</a>
+            <a href="Revenue.html">Revenue Report</a>
+            <a href="login.html" class="login-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="logo.png" alt="Blaker Travel & Tour" class="hero-logo">
+                <h1>Revenue Report</h1>
+                <p>Review revenue trends, booking status, top-selling vans, and recent reservations in one financial dashboard.</p>
+                <a href="#revenue-overview" class="rent-btn">View Revenue Summary</a>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </section>
+
+        <section class="van-types compact" id="revenue-overview">
+            <h2>Revenue Overview</h2>
+            <div class="vans-grid">
+                <div class="van-card line-chart-card">
+                    <h3>Revenue Trend</h3>
+                    <div class="line-chart">
+                        <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00b894" />
+                                    <stop offset="100%" stop-color="#0984e3" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M30 180 L90 150 L150 120 L210 130 L270 95 L330 70" fill="none" stroke="url(#lineGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="30" cy="180" r="6" fill="#00b894" />
+                            <circle cx="90" cy="150" r="6" fill="#00b894" />
+                            <circle cx="150" cy="120" r="6" fill="#00b894" />
+                            <circle cx="210" cy="130" r="6" fill="#00b894" />
+                            <circle cx="270" cy="95" r="6" fill="#00b894" />
+                            <circle cx="330" cy="70" r="6" fill="#00b894" />
+                            <path d="M30 180 L330 180" stroke="rgba(79,148,205,0.2)" stroke-width="2"/>
+                            <path d="M30 150 L330 150" stroke="rgba(79,148,205,0.12)" stroke-width="1"/>
+                            <path d="M30 120 L330 120" stroke="rgba(79,148,205,0.12)" stroke-width="1"/>
+                            <path d="M30 90 L330 90" stroke="rgba(79,148,205,0.12)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="line-chart-labels">
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                    </div>
+                    <div class="line-chart-stats">
+                        <div>
+                            <strong>₱68,250</strong>
+                            <p>This month</p>
+                        </div>
+                        <div>
+                            <strong>+14%</strong>
+                            <p>Growth</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="van-card line-chart-card">
+                    <h3>Year-to-Date Trend</h3>
+                    <div class="line-chart">
+                        <svg viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="lineGradientYTD" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#6c5ce7" />
+                                    <stop offset="100%" stop-color="#0984e3" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M30 180 L90 165 L150 140 L210 130 L270 110 L330 90" fill="none" stroke="url(#lineGradientYTD)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="30" cy="180" r="6" fill="#6c5ce7" />
+                            <circle cx="90" cy="165" r="6" fill="#6c5ce7" />
+                            <circle cx="150" cy="140" r="6" fill="#6c5ce7" />
+                            <circle cx="210" cy="130" r="6" fill="#6c5ce7" />
+                            <circle cx="270" cy="110" r="6" fill="#6c5ce7" />
+                            <circle cx="330" cy="90" r="6" fill="#6c5ce7" />
+                            <path d="M30 180 L330 180" stroke="rgba(79,148,205,0.2)" stroke-width="2"/>
+                            <path d="M30 150 L330 150" stroke="rgba(79,148,205,0.12)" stroke-width="1"/>
+                            <path d="M30 120 L330 120" stroke="rgba(79,148,205,0.12)" stroke-width="1"/>
+                            <path d="M30 90 L330 90" stroke="rgba(79,148,205,0.12)" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="line-chart-labels">
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                    </div>
+                    <div class="line-chart-stats">
+                        <div>
+                            <strong>₱412,300</strong>
+                            <p>YTD Revenue</p>
+                        </div>
+                        <div>
+                            <strong>₱210</strong>
+                            <p>Avg. Booking</p>
+                        </div>
+                    </div>
+                    <p><strong>Revenue</strong> remains strong with consistent booking value.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="van-types compact" id="booking-status-report">
+            <h2>Booking Status</h2>
+            <div class="status-chart-grid">
+                <div class="van-card status-pie-card">
+                    <div class="pie-chart"></div>
+                    <div class="pie-chart-summary">
+                        <span class="pie-total">70</span>
+                        <span class="pie-subtitle">Active Bookings</span>
+                    </div>
+                    <p>Distribution across upcoming, ongoing, cancelled, and completed bookings.</p>
+                </div>
+                <div class="van-card status-legend-card">
+                    <div class="status-item upcoming">
+                        <span class="status-dot"></span>
+                        <div>
+                            <h3>Upcoming</h3>
+                            <p>14 reservations awaiting pickup.</p>
+                        </div>
+                        <strong>20%</strong>
+                    </div>
+                    <div class="status-item ongoing">
+                        <span class="status-dot"></span>
+                        <div>
+                            <h3>Ongoing</h3>
+                            <p>20 trips currently in progress.</p>
+                        </div>
+                        <strong>28%</strong>
+                    </div>
+                    <div class="status-item cancelled">
+                        <span class="status-dot"></span>
+                        <div>
+                            <h3>Cancelled</h3>
+                            <p>6 bookings were cancelled this period.</p>
+                        </div>
+                        <strong>8%</strong>
+                    </div>
+                    <div class="status-item completed">
+                        <span class="status-dot"></span>
+                        <div>
+                            <h3>Completed</h3>
+                            <p>30 trips finished successfully.</p>
+                        </div>
+                        <strong>42%</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="van-types compact" id="top-cars-report">
+            <h2>Top Cars</h2>
+            <div class="vans-grid">
+                <div class="van-card chart-card">
+                    <img src="family-van.jpg" alt="Family Van" class="van-image">
+                    <h3>Family Van</h3>
+                    <div class="chart-bar-row">
+                        <span class="chart-label">Rentals</span>
+                        <div class="chart-bar"><span class="chart-fill" style="width: 82%"></span></div>
+                        <span class="chart-value">82</span>
+                    </div>
+                    <p>Most popular class for group travel and family trips.</p>
+                </div>
+                <div class="van-card chart-card">
+                    <img src="luxury-van.jfif" alt="Luxury Van" class="van-image">
+                    <h3>Luxury Van</h3>
+                    <div class="chart-bar-row">
+                        <span class="chart-label">Rentals</span>
+                        <div class="chart-bar"><span class="chart-fill" style="width: 54%"></span></div>
+                        <span class="chart-value">54</span>
+                    </div>
+                    <p>High-value bookings for premium travel services.</p>
+                </div>
+                <div class="van-card chart-card">
+                    <img src="cargo-van.jfif" alt="Cargo Van" class="van-image">
+                    <h3>Cargo Van</h3>
+                    <div class="chart-bar-row">
+                        <span class="chart-label">Rentals</span>
+                        <div class="chart-bar"><span class="chart-fill" style="width: 38%"></span></div>
+                        <span class="chart-value">38</span>
+                    </div>
+                    <p>Utility rentals for transport and delivery requirements.</p>
+                </div>
+                <div class="van-card chart-card">
+                    <img src="compact-van.jpg" alt="Compact Van" class="van-image">
+                    <h3>Compact Van</h3>
+                    <div class="chart-bar-row">
+                        <span class="chart-label">Rentals</span>
+                        <div class="chart-bar"><span class="chart-fill" style="width: 34%"></span></div>
+                        <span class="chart-value">30</span>
+                    </div>
+                    <p>Budget-friendly choice for solo travelers and city use.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="van-types compact" id="recent-booking-report">
+            <h2>Recent Booking</h2>
+            <div class="vans-grid">
+                <div class="van-card booking-card">
+                    <div class="booking-card-header">
+                        <img src="family-van.jpg" alt="Booking Family Van" class="van-image">
+                        <div class="booking-card-title">
+                            <h3>Booking #1024</h3>
+                            <span class="booking-status confirmed">Confirmed</span>
+                        </div>
+                    </div>
+                    <div class="booking-details">
+                        <div class="detail-row"><span>Customer</span><strong>Maria Cruz</strong></div>
+                        <div class="detail-row"><span>Car</span><strong>Family Van</strong></div>
+                        <div class="detail-row"><span>Pickup Date</span><strong>May 5, 2026</strong></div>
+                        <div class="detail-row"><span>Total Payment</span><strong>₱14,200</strong></div>
+                    </div>
+                    <p class="booking-note">Family Van reserved for a 3-day coastal trip with 6 passengers.</p>
+                </div>
+                <div class="van-card booking-card">
+                    <div class="booking-card-header">
+                        <img src="luxury-van.jfif" alt="Booking Luxury Van" class="van-image">
+                        <div class="booking-card-title">
+                            <h3>Booking #1027</h3>
+                            <span class="booking-status in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="booking-details">
+                        <div class="detail-row"><span>Customer</span><strong>Alex Mendoza</strong></div>
+                        <div class="detail-row"><span>Car</span><strong>Luxury Van</strong></div>
+                        <div class="detail-row"><span>Pickup Date</span><strong>May 3, 2026</strong></div>
+                        <div class="detail-row"><span>Total Payment</span><strong>₱22,500</strong></div>
+                    </div>
+                    <p class="booking-note">Executive airport transfer with premium chauffeur service.</p>
+                </div>
+                <div class="van-card booking-card">
+                    <div class="booking-card-header">
+                        <img src="compact-van.jpg" alt="Booking Compact Van" class="van-image">
+                        <div class="booking-card-title">
+                            <h3>Booking #1031</h3>
+                            <span class="booking-status pending">Pending Pickup</span>
+                        </div>
+                    </div>
+                    <div class="booking-details">
+                        <div class="detail-row"><span>Customer</span><strong>Kim Santos</strong></div>
+                        <div class="detail-row"><span>Car</span><strong>Compact Van</strong></div>
+                        <div class="detail-row"><span>Pickup Date</span><strong>May 7, 2026</strong></div>
+                        <div class="detail-row"><span>Total Payment</span><strong>₱8,400</strong></div>
+                    </div>
+                    <p class="booking-note">Compact Van booking for a weekend city tour and shopping trip.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blaker Travel & Tour</h2>
+                <p>Reliable van rentals for families, cargo, and luxury travel. Ready for your next road trip.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="Vanrental.html">Van Rental</a>
+                <a href="Aboutus.html">About us</a>
+                <a href="Contactus.html">Contact us</a>
+                <a href="Review.html">Review</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: 0997 915 3983</p>
+                <p>Email: support@blakertravel.com</p>
+                <p>Orell Building, Lower San Roque Bulacao, Cebu city</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
