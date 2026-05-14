@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Blaker Travel & Tour</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="logo.png" alt="Blaker Travel & Tour" class="logo">
+            <h1>Blaker Travel & Tour</h1>
+        </div>
+        <nav>
+            <a href="#our-van">Van Rental</a>
+            <a href="login.html" class="login-btn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="logo.png" alt="Blaker Travel & Tour" class="hero-logo">
+                <h1>Welcome to User View</h1>
+                <p>Continue Your Rental Journey. Browse our available vans and complete your booking securely.</p>
+                <a href="#our-van" class="rent-btn">Choose a Van</a>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </section>
+
+        <section class="currently-rented hidden">
+            <h2>Your Active Rental</h2>
+            <div id="rental-action-notification" class="rental-action-notification hidden">
+                <button type="button" id="rental-notification-close" class="rental-notification-close">×</button>
+                <span id="rental-notification-message"></span>
+            </div>
+            <div class="active-rental-card">
+                <div class="rental-header">
+                    <div class="rental-status-badge">
+                        <span class="status-icon">🚐</span>
+                        <span class="status-text">Currently Being Rented</span>
+                    </div>
+                </div>
+                <div class="rental-content">
+                    <div class="rental-image-section">
+                        <img src="compact-van.jpg" alt="Compact Van" class="rental-van-image">
+                        <div class="rental-notification">
+                            <span class="notification-title">⏳ In Progress</span>
+                            <p>You are currently renting this van</p>
+                        </div>
+                    </div>
+                    <div class="rental-info-section">
+                        <h3 id="active-rental-van-name">Compact Van</h3>
+                        <div class="rental-details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Pickup Date:</span>
+                                <span id="pickup-date-value" class="detail-value">May 16, 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Return Date:</span>
+                                <span id="return-date-value" class="detail-value">May 18, 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Duration:</span>
+                                <span id="duration-value" class="detail-value">2 Days</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Capacity:</span>
+                                <span class="detail-value">4 passengers</span>
+                            </div>
+                        </div>
+                        <p class="rental-description">Efficient, agile, and easy to drive. Ideal for quick city trips and small groups.</p>
+                        <div class="rental-actions">
+                            <button type="button" class="done-renting-btn">✓ Confirm Return</button>
+                            <button type="button" class="extend-rental-btn">⏱ Extend Rental</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="van-listing" id="our-van">
+            <h2>Available Vans</h2>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="compact-van.jpg" alt="Compact Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Compact Van</h3>
+                    <p>Efficient, agile, and easy to drive. Ideal for quick city trips and small groups.</p>
+                    <ul class="van-features">
+                        <li>4 passengers</li>
+                        <li>Compact size for tight spaces</li>
+                        <li>Fuel-efficient performance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="family-van.jpg" alt="Family Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Family Van</h3>
+                    <p>Comfortable seating and extra cargo room make it perfect for family road trips and weekend getaways.</p>
+                    <ul class="van-features">
+                        <li>7 passengers</li>
+                        <li>Roomy interior with luggage space</li>
+                        <li>Entertainment-ready cabin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="luxury-van.jfif" alt="Luxury Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Luxury Van</h3>
+                    <p>Premium finishes, plush seating, and high-end amenities for a more elegant travel experience.</p>
+                    <ul class="van-features">
+                        <li>Leather seats</li>
+                        <li>Premium audio system</li>
+                        <li>Advanced comfort features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="van-item">
+                <div class="van-image-block">
+                    <img src="cargo-van.jfif" alt="Cargo Van" class="van-image">
+                    <button type="button" class="book-btn">Book</button>
+                </div>
+                <div class="van-details">
+                    <h3>Cargo Van</h3>
+                    <p>Strong, spacious, and dependable. Great for moving items, equipment, and supplies.</p>
+                    <ul class="van-features">
+                        <li>Large cargo area</li>
+                        <li>Heavy-duty handling</li>
+                        <li>Reliable for long trips</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-bookings">
+            <h2>My Bookings</h2>
+            <div class="bookings-container">
+                <div class="booking-card">
+                    <div class="booking-image">
+                        <img src="compact-van.jpg" alt="Compact Van" class="booking-van-image">
+                        <span class="booking-status in-progress">BOOKING IN PROGRESS</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Compact Van</h3>
+                        <p class="booking-date"><strong>Booking Date:</strong> May 13, 2026</p>
+                        <p class="booking-date"><strong>Rental Period:</strong> May 16 - May 18, 2026</p>
+                        <p class="booking-date"><strong>Status:</strong> <span class="status-progress">⏳ Booking in Progress</span></p>
+                        <p class="booking-info">4 passengers • Compact size for tight spaces</p>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-image">
+                        <img src="family-van.jpg" alt="Family Van" class="booking-van-image">
+                        <span class="booking-status rented">VAN RENTED</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Family Van</h3>
+                        <p class="booking-date"><strong>Booking Date:</strong> May 10, 2026</p>
+                        <p class="booking-date"><strong>Rental Period:</strong> May 12 - May 15, 2026</p>
+                        <p class="booking-date"><strong>Status:</strong> <span class="status-complete">✓ Booking Complete</span></p>
+                        <p class="booking-info">7 passengers • Roomy interior with luggage space</p>
+                        <div class="review-summary">
+                            <div class="review-mini">
+                                <span class="stars-mini">★★★★★</span>
+                                <span class="rating-mini">5/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-actions">
+                        <button type="button" class="review-btn">Edit Review</button>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-image">
+                        <img src="luxury-van.jfif" alt="Luxury Van" class="booking-van-image">
+                        <span class="booking-status rented">VAN RENTED</span>
+                    </div>
+                    <div class="booking-details">
+                        <h3>Luxury Van</h3>
+                        <p class="booking-date"><strong>Booking Date:</strong> May 5, 2026</p>
+                        <p class="booking-date"><strong>Rental Period:</strong> May 8 - May 10, 2026</p>
+                        <p class="booking-date"><strong>Status:</strong> <span class="status-complete">✓ Booking Complete</span></p>
+                        <p class="booking-info">Leather seats • Premium audio system • Advanced comfort</p>
+                        <div class="review-summary">
+                            <div class="review-mini">
+                                <span class="stars-mini">★★★★☆</span>
+                                <span class="rating-mini">4/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-actions">
+                        <button type="button" class="review-btn">Edit Review</button>
+                    </div>
+                </div>
+            </div>
+            <div class="add-rental-btn">
+                <a href="#our-van" class="rent-btn">+ Add More Rentals</a>
+            </div>
+        </section>
+
+        <section class="user-reviews">
+            <h2>Your Reviews & Comments</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <h4>Family Van Experience</h4>
+                        <span class="review-date">May 15, 2026</span>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">5/5 - Excellent</span>
+                    </div>
+                    <p class="review-comment">
+                        "The family van was perfect for our trip! Very spacious and comfortable. The staff was helpful and the vehicle was clean. Highly recommended!"
+                    </p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <h4>Luxury Van Experience</h4>
+                        <span class="review-date">May 10, 2026</span>
+                    </div>
+                    <div class="review-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4/5 - Very Good</span>
+                    </div>
+                    <p class="review-comment">
+                        "Amazing luxury features and premium comfort. The only issue was the GPS system was a bit outdated. Overall, great value for the price."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="payment-modal-overlay" id="payment-modal">
+        <div class="payment-modal">
+            <h2>Please choose your payment method</h2>
+            <p>Select a payment option to complete your booking. <strong>Payment method selection is required.</strong></p>
+            <div class="payment-options">
+                <button type="button" class="payment-option" data-method="Card">Card</button>
+                <button type="button" class="payment-option" data-method="GCash">GCash</button>
+                <button type="button" class="payment-option" data-method="Cash">Cash on Delivery</button>
+            </div>
+            <div id="payment-form-container" class="payment-form-container"></div>
+            <button type="button" class="modal-close" id="payment-close">Cancel</button>
+        </div>
+    </div>
+
+    <div class="review-modal-overlay" id="review-modal">
+        <div class="review-modal">
+            <h2>Rate Your Booking</h2>
+            <div class="rating-stars">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+            </div>
+            <div class="rating-text">Click to rate</div>
+            <div class="input-group">
+                <label for="review-comments">Comments</label>
+                <textarea id="review-comments" name="review-comments" placeholder="Share your thoughts about the booking and payment experience" rows="4"></textarea>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="review-submit-btn">Submit Review</button>
+                <button type="button" class="modal-close" id="review-close">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blaker Travel & Tour</h2>
+                <p>Reliable van rentals for families, cargo, and luxury travel. Ready for your next road trip.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Home</a>
+                <a href="Vanrental.html">Van Rental</a>
+                <a href="Aboutus.html">About us</a>
+                <a href="Contactus.html">Contact us</a>
+                <a href="Review.html">Review</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: 0997 915 3983</p>
+                <p>Email: support@blakertravel.com</p>
+                <p>Orell Building, Lower San Roque Bulacao, Cebu city</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="myscript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var welcomeUserNameElem = document.getElementById('welcome-user-name');
+            var storedName = localStorage.getItem('blakerUserName') || localStorage.getItem('blakerRole') || 'Traveler';
+            if (welcomeUserNameElem) {
+                welcomeUserNameElem.textContent = storedName;
+            }
+
+            // Review Modal Functionality
+            var reviewModal = document.getElementById('review-modal');
+            var reviewCloseBtn = document.getElementById('review-close');
+            var reviewSubmitBtn = document.querySelector('.review-submit-btn');
+            var reviewBtns = document.querySelectorAll('.review-btn');
+            var stars = document.querySelectorAll('.star');
+            var ratingText = document.querySelector('.rating-text');
+            var currentRating = 0;
+
+            // Open review modal
+            reviewBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    reviewModal.style.display = 'flex';
+                    // Reset rating
+                    currentRating = 0;
+                    stars.forEach(function(star) {
+                        star.classList.remove('active');
+                    });
+                    ratingText.textContent = 'Click to rate';
+                    document.getElementById('review-comments').value = '';
+                });
+            });
+
+            // Close review modal
+            reviewCloseBtn.addEventListener('click', function() {
+                reviewModal.style.display = 'none';
+            });
+
+            // Click outside to close
+            reviewModal.addEventListener('click', function(e) {
+                if (e.target === reviewModal) {
+                    reviewModal.style.display = 'none';
+                }
+            });
+
+            // Star rating functionality
+            stars.forEach(function(star, index) {
+                star.addEventListener('click', function() {
+                    currentRating = parseInt(this.dataset.rating);
+                    // Update stars
+                    stars.forEach(function(s, i) {
+                        if (i < currentRating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                    // Update rating text
+                    var ratingTexts = ['Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+                    ratingText.textContent = ratingTexts[currentRating - 1] + ' (' + currentRating + '/5)';
+                });
+
+                star.addEventListener('mouseover', function() {
+                    var hoverRating = parseInt(this.dataset.rating);
+                    stars.forEach(function(s, i) {
+                        if (i < hoverRating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+
+                star.addEventListener('mouseout', function() {
+                    stars.forEach(function(s, i) {
+                        if (i < currentRating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Submit review
+            reviewSubmitBtn.addEventListener('click', function() {
+                if (currentRating === 0) {
+                    alert('Please select a rating before submitting.');
+                    return;
+                }
+
+                var comments = document.getElementById('review-comments').value.trim();
+                if (comments === '') {
+                    alert('Please add a comment before submitting.');
+                    return;
+                }
+
+                // Here you would typically send the review to a server
+                alert('Thank you for your review! Rating: ' + currentRating + '/5\nComments: ' + comments);
+                reviewModal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
