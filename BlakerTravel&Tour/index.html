@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaker Travel & Tour - Van Rental</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <img src="logo.png" alt="Blaker Travel & Tour" class="logo">
+            <h1>Blakers Travel & Tour</h1>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="Vanrental.html">Van Rental</a>
+            <a href="Aboutus.html">About us</a>
+            <a href="Contactus.html">Contact us</a>
+            <a href="Review.html">Review</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="logo.png" alt="Blaker Travel & Tour" class="hero-logo">
+                <h1>Go Anywhere, Travel Everywhere with Blaker Travel & Tour</h1>
+                <p>We provide complete van rental solutions for your unforgettable journeys. Book now and hit the road!</p>
+                <a href="#booking" class="rent-btn">Start Your Adventure</a>
+            </div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </section>
+        <section id="van-types" class="van-types compact">
+            <h2>Our Van Types</h2>
+            <div class="vans-grid">
+                <div class="van-card">
+                    <img src="compact-van.jpg" alt="Compact Van" class="van-image">
+                    <h3>Compact Vans</h3>
+                    <p>Perfect for small groups and city trips.</p>
+                </div>
+                <div class="van-card">
+                    <img src="family-van.jpg" alt="Family Van" class="van-image">
+                    <h3>Family Vans</h3>
+                    <p>Spacious and comfortable for family adventures.</p>
+                </div>
+                <div class="van-card">
+                    <img src="luxury-van.jfif" alt="Luxury Van" class="van-image">
+                    <h3>Luxury Vans</h3>
+                    <p>Premium features for an elevated travel experience.</p>
+                </div>
+                <div class="van-card">
+                    <img src="cargo-van.jfif" alt="Cargo Van" class="van-image">
+                    <h3>Cargo Vans</h3>
+                    <p>Ideal for transporting goods and equipment.</p>
+                </div>
+            </div>
+        </section>
+        <section id="booking" class="booking-section">
+            <div class="booking-steps">
+                <h2>How to Book?</h2>
+                <ol>
+                    <li>Choose your van type and package.</li>
+                    <li>Select pickup and return date and time.</li>
+                    <li>Enter pickup and return locations.</li>
+                    <li>Provide your contact details and submit.</li>
+                </ol>
+            </div>
+            <div class="booking-card" id="rent-your-van">
+                <div class="booking-title">Rent Your Van</div>
+                <form class="booking-form" action="userdashboard.html">
+                    <div class="booking-row">
+                        <div class="input-group">
+                            <label for="pickup-datetime">Pickup Date/Time</label>
+                            <input type="datetime-local" id="pickup-datetime" name="pickup-datetime" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="return-datetime">Return Date/Time</label>
+                            <input type="datetime-local" id="return-datetime" name="return-datetime" required>
+                        </div>
+                    </div>
+                    <div class="booking-row">
+                        <div class="input-group">
+                            <label for="pickup-location">Pickup Location</label>
+                            <input type="text" id="pickup-location" name="pickup-location" placeholder="Pickup location" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="return-location">Return Location</label>
+                            <input type="text" id="return-location" name="return-location" placeholder="Return location" required>
+                        </div>
+                    </div>
+                    <div class="booking-row">
+                        <div class="input-group">
+                            <label for="book-name">Name</label>
+                            <input type="text" id="book-name" name="book-name" placeholder="Your full name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="book-email">Email</label>
+                            <input type="email" id="book-email" name="book-email" placeholder="Your email address" required>
+                        </div>
+                    </div>
+                    <div class="booking-row single-row">
+                        <div class="input-group">
+                            <label for="book-phone">Phone Number</label>
+                            <input type="tel" id="book-phone" name="book-phone" placeholder="Your phone number" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="book-btn">Book Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blaker Travel & Tour</h2>
+                <p>Reliable van rentals for families, cargo, and luxury travel. Ready for your next road trip.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="#home">Home</a>
+                <a href="Vanrental.html">Van Rental</a>
+                <a href="Aboutus.html">About us</a>
+                <a href="Contactus.html">Contact us</a>
+                <a href="Review.html">Review</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Phone: 0997 915 3983</p>
+                <p>Email: support@blakertravel.com</p>
+                <p>Orell Building, Lower San Roque Bulacao, Cebu city</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blaker Travel & Tour. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="myscript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var bookingForm = document.querySelector('.booking-form');
+            var pickupDateInput = document.getElementById('pickup-datetime');
+            var returnDateInput = document.getElementById('return-datetime');
+            var pickupLocationInput = document.getElementById('pickup-location');
+            var returnLocationInput = document.getElementById('return-location');
+            var nameInput = document.getElementById('book-name');
+            var emailInput = document.getElementById('book-email');
+            var phoneInput = document.getElementById('book-phone');
+
+            function getPendingBooking() {
+                var pending = localStorage.getItem('blakerPendingBooking');
+                if (!pending) return null;
+                try {
+                    return JSON.parse(pending);
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            function restorePendingBooking() {
+                var pending = getPendingBooking();
+                if (!pending) return;
+                if (pickupDateInput) pickupDateInput.value = pending.pickupDatetime || '';
+                if (returnDateInput) returnDateInput.value = pending.returnDatetime || '';
+                if (pickupLocationInput) pickupLocationInput.value = pending.pickupLocation || '';
+                if (returnLocationInput) returnLocationInput.value = pending.returnLocation || '';
+                if (nameInput) nameInput.value = pending.name || '';
+                if (emailInput) emailInput.value = pending.email || '';
+                if (phoneInput) phoneInput.value = pending.phone || '';
+            }
+
+            function savePendingBooking() {
+                var bookingData = {
+                    pickupDatetime: pickupDateInput ? pickupDateInput.value : '',
+                    returnDatetime: returnDateInput ? returnDateInput.value : '',
+                    pickupLocation: pickupLocationInput ? pickupLocationInput.value.trim() : '',
+                    returnLocation: returnLocationInput ? returnLocationInput.value.trim() : '',
+                    name: nameInput ? nameInput.value.trim() : '',
+                    email: emailInput ? emailInput.value.trim() : '',
+                    phone: phoneInput ? phoneInput.value.trim() : ''
+                };
+                localStorage.setItem('blakerPendingBooking', JSON.stringify(bookingData));
+            }
+
+            restorePendingBooking();
+
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(event) {
+                    var isLoggedIn = localStorage.getItem('blakerLoggedIn') === 'true';
+
+                    if (!bookingForm.checkValidity()) {
+                        event.preventDefault();
+                        bookingForm.reportValidity();
+                        return;
+                    }
+
+                    if (!isLoggedIn) {
+                        event.preventDefault();
+                        savePendingBooking();
+                        alert('Please login first to book a van. Your booking details have been saved.');
+                        window.location.href = 'login.html';
+                        return;
+                    }
+
+                    var bookingData = {
+                        pickupDatetime: pickupDateInput ? pickupDateInput.value : '',
+                        returnDatetime: returnDateInput ? returnDateInput.value : '',
+                        pickupLocation: pickupLocationInput ? pickupLocationInput.value.trim() : '',
+                        returnLocation: returnLocationInput ? returnLocationInput.value.trim() : '',
+                        name: nameInput ? nameInput.value.trim() : '',
+                        email: emailInput ? emailInput.value.trim() : '',
+                        phone: phoneInput ? phoneInput.value.trim() : '',
+                        vanName: 'Van Booking',
+                        status: 'Currently Being Rented'
+                    };
+                    localStorage.setItem('blakerActiveRental', JSON.stringify(bookingData));
+                    localStorage.removeItem('blakerPendingBooking');
+                });
+            }
+        });
+    </script>
+</body>
+</html></content>
